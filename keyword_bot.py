@@ -51,11 +51,12 @@ async def main():
     chat_id = -1003127312955
 
     # Schedule report every day at 23:59
-    app.job_queue.run_daily(daily_report, time=time(1,25 ), chat_id=chat_id)
+    app.job_queue.run_daily(daily_report, time=time(1,40 ), chat_id=chat_id)
 
     await app.run_polling()
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
 
